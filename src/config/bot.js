@@ -10,30 +10,29 @@ export const botConfig = {
   // - "idle"      = yellow moon
   // - "dnd"       = red do-not-disturb
   // - "invisible" = appears offline
-  presence: {
-    // Current online state shown on Discord.
-    status: "dnd",
+ // =========================
+// BOT PRESENCE (Animated / Rotating)
+// =========================
+presence: {
+  status: "dnd",
+  activities: [], // initially empty
+},
 
-    // Activity lines shown under the bot name.
-    // `type` number mapping from Discord:
-    // 0 = Playing
-    // 1 = Streaming
-    // 2 = Listening
-    // 3 = Watching
-    // 4 = Custom
-    // 5 = Competing
-  
-    activities: [
-      {
-        activities: [
-          { name: "❤️ Protecting your server" },
-          { name: "☣️ Trusted Service" },
-          { name: "💥 Fast Service" },
-        ],
-        type: 0, 
-      },
-    ],
-  },
+// =========================
+// Animate activities
+// =========================
+const activities = [
+  { name: "❤️ Protecting your server", type: 0 },
+  { name: "☣️ Trusted Service", type: 0 },
+  { name: "💥 Fast Service", type: 0 },
+];
+
+let activityIndex = 0;
+setInterval(() => {
+  const activity = activities[activityIndex];
+  client.user.setActivity(activity.name, { type: activity.type });
+  activityIndex = (activityIndex + 1) % activities.length;
+}, 10000); // 10 seconds por por change
 
 
   // =========================
