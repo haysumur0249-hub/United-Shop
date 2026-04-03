@@ -29,7 +29,7 @@ export const botConfig = {
       { name: "❤️ Protecting your server" },
       { name: "☣️ Trusted Service" },
       { name: "💥 Fast Service"  },
-    ],
+    
         // Activity type number (0 = Playing).
         type: 4, 
       },
@@ -92,8 +92,8 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#A52A2A", 
-      secondary: "#2F3136", 
+      primary: "#FF9913", 
+      secondary: "#FF9913", 
 
       // Standard status colors for success/error/warning/info messages.
       success: "#57F287", 
