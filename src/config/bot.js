@@ -10,30 +10,27 @@ export const botConfig = {
   // - "idle"      = yellow moon
   // - "dnd"       = red do-not-disturb
   // - "invisible" = appears offline
- // =========================
-// BOT PRESENCE (Animated / Rotating)
-// =========================
-presence: {
-  status: "dnd",
-  activities: [], // initially empty
-},
+  presence: {
+    // Current online state shown on Discord.
+    status: "dnd",
 
-// =========================
-// Animate activities
-// =========================
-const activities = [
-  { name: "❤️ Protecting your server", type: 0 },
-  { name: "☣️ Trusted Service", type: 0 },
-  { name: "💥 Fast Service", type: 0 },
-];
-
-let activityIndex = 0;
-setInterval(() => {
-  const activity = activities[activityIndex];
-  client.user.setActivity(activity.name, { type: activity.type });
-  activityIndex = (activityIndex + 1) % activities.length;
-}, 10000); // 10 seconds por por change
-
+    // Activity lines shown under the bot name.
+    // `type` number mapping from Discord:
+    // 0 = Playing
+    // 1 = Streaming
+    // 2 = Listening
+    // 3 = Watching
+    // 4 = Custom
+    // 5 = Competing
+    activities: [
+      {
+        // Text users will see (example: "Playing /help | Titan Bot").
+        name: "Made with ❤️, ☣️ To Proteced The server Trusted ,💥 Fast service",
+        // Activity type number (0 = Playing).
+        type: 4, 
+      },
+    ],
+  },
 
   // =========================
   // COMMAND BEHAVIOR
@@ -91,8 +88,8 @@ setInterval(() => {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#FF9913", 
-      secondary: "#FF9913", 
+      primary: "#A52A2A", 
+      secondary: "#2F3136", 
 
       // Standard status colors for success/error/warning/info messages.
       success: "#57F287", 
@@ -546,7 +543,3 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-
-
-
-
