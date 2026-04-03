@@ -22,19 +22,20 @@ export const botConfig = {
     // 3 = Watching
     // 4 = Custom
     // 5 = Competing
+   presence: {
+    status: "dnd",
     activities: [
       {
-        // Text users will see (example: "Playing /help | Titan Bot").
-          activities: [
-      { name: "❤️ Protecting your server" },
-      { name: "☣️ Trusted Service" },
-      { name: "💥 Fast Service"  },
-    
-        // Activity type number (0 = Playing).
+        activities: [
+          { name: "❤️ Protecting your server" },
+          { name: "☣️ Trusted Service" },
+          { name: "💥 Fast Service" },
+        ],
         type: 4, 
       },
     ],
   },
+
 
   // =========================
   // COMMAND BEHAVIOR
