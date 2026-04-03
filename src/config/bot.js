@@ -22,8 +22,7 @@ export const botConfig = {
     // 3 = Watching
     // 4 = Custom
     // 5 = Competing
-   presence: {
-    status: "dnd",
+  
     activities: [
       {
         activities: [
