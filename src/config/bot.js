@@ -30,7 +30,7 @@ export const botConfig = {
           { name: "☣️ Trusted Service" },
           { name: "💥 Fast Service" },
         ],
-        type: 4, 
+        type: 0, 
       },
     ],
   },
