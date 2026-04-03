@@ -27,7 +27,7 @@ export const botConfig = {
         // Text users will see (example: "Playing /help | Titan Bot").
         name: "Made with ❤️, ☣️ To Proteced The server Trusted ,💥 Fast service",
         // Activity type number (0 = Playing).
-        type: 4, 
+        type: 0, 
       },
     ],
   },
@@ -63,9 +63,9 @@ export const botConfig = {
 
     // Embed colors by application status.
     statusColors: {
-      pending: "#FFA500",
-      approved: "#00FF00",
-      denied: "#FF0000",
+      pending: "#FF9913",
+      approved: "#FF9913",
+      denied: "#FF9913",
     },
 
     // How long users must wait before submitting another application (hours).
@@ -98,9 +98,9 @@ export const botConfig = {
       info: "#FF9913", 
 
       // Neutral utility colors.
-      light: "#FF9913F",
-      dark: "#202225",
-      gray: "#99AAB5",
+      light: "#FF9913",
+      dark: "#FF9913",
+      gray: "#FF9913",
 
       // Discord-style palette shortcuts.
       blurple: "#5865F2",
